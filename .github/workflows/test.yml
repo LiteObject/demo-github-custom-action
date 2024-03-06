@@ -1,7 +1,19 @@
 name: Test My Hello-World Action
 
 on:
-    push
+    schedule:
+        # - cron: "0 0 * * *" # Runs at midnight every day
+        # - cron: "0 * * * *" # run every hour
+        - cron: "*/30 * * * *" # Every 30 minutes
+        # 0 - Run at the top of every hour (minute 0)
+        # * - Every hour
+        # * - Every day of the month
+        # * - Every month
+        # * - Every day of the week
+    push:
+        branches:
+            - main
+            - feature/*
 
 jobs:
     test:
