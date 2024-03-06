@@ -7,7 +7,9 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
-            - name: Hello World 
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Run python action
               uses: ./ 
               with:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
