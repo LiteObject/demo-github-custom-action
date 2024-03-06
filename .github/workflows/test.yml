@@ -1,0 +1,13 @@
+name: Test My Hello-World Action
+
+on:
+    push
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Hello World 
+              uses: ./ 
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
