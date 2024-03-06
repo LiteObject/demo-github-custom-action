@@ -6,6 +6,7 @@ def main():
   name = 'World'
   user_input =  name = os.environ['INPUT_PERSON']
   print(f"user_input: {user_input}")
+  
   if 'GITHUB_EVENT_PATH' in os.environ:
     event_path = os.environ['GITHUB_EVENT_PATH']
     with open(event_path) as fp:
